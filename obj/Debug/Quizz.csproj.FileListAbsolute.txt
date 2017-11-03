@@ -12,3 +12,14 @@ E:\VisualStudio\Quizz\Quizz\obj\Debug\Quizz.AddNewPlayer.resources
 E:\VisualStudio\Quizz\Quizz\bin\Debug\MySql.Data.dll
 E:\VisualStudio\Quizz\Quizz\bin\Debug\MySql.Web.dll
 E:\VisualStudio\Quizz\Quizz\obj\Debug\Quizz.Game.resources
+C:\Users\Emmanuel.JANSSENS\Documents\EMMANUEl\Quizz\bin\Debug\Quizz.exe.config
+C:\Users\Emmanuel.JANSSENS\Documents\EMMANUEl\Quizz\obj\Debug\Quizz.exe
+C:\Users\Emmanuel.JANSSENS\Documents\EMMANUEl\Quizz\obj\Debug\Quizz.pdb
+C:\Users\Emmanuel.JANSSENS\Documents\EMMANUEl\Quizz\bin\Debug\Quizz.exe
+C:\Users\Emmanuel.JANSSENS\Documents\EMMANUEl\Quizz\bin\Debug\Quizz.pdb
+C:\Users\Emmanuel.JANSSENS\Documents\EMMANUEl\Quizz\obj\Debug\Quizz.csprojResolveAssemblyReference.cache
+C:\Users\Emmanuel.JANSSENS\Documents\EMMANUEl\Quizz\obj\Debug\Quizz.AddNewPlayer.resources
+C:\Users\Emmanuel.JANSSENS\Documents\EMMANUEl\Quizz\obj\Debug\Quizz.Game.resources
+C:\Users\Emmanuel.JANSSENS\Documents\EMMANUEl\Quizz\obj\Debug\Quizz.MainMenu.resources
+C:\Users\Emmanuel.JANSSENS\Documents\EMMANUEl\Quizz\obj\Debug\Quizz.Properties.Resources.resources
+C:\Users\Emmanuel.JANSSENS\Documents\EMMANUEl\Quizz\obj\Debug\Quizz.csproj.GenerateResource.Cache

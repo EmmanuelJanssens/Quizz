@@ -22,8 +22,9 @@ namespace Quizz
             Game game = new Game();
             game.Show();
 
+            Player p = new Player(txtPseudo.Text, 0);
             MySQL.current.Insert("joueur(Nom)",txtPseudo.Text);
-            GameManager.current.CurrentPlayer = txtPseudo.Text;
+            GameManager.current.CurrentPlayer = p;
 
             this.Dispose();
         }

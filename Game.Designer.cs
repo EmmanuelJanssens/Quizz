@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCategory = new System.Windows.Forms.Label();
-            this.grpQuestion = new System.Windows.Forms.GroupBox();
-            this.rbAnswerOne = new System.Windows.Forms.RadioButton();
-            this.rbAnswerTwo = new System.Windows.Forms.RadioButton();
             this.rbAnswerThree = new System.Windows.Forms.RadioButton();
+            this.rbAnswerTwo = new System.Windows.Forms.RadioButton();
+            this.rbAnswerOne = new System.Windows.Forms.RadioButton();
             this.lblTimer = new System.Windows.Forms.Label();
             this.cmdQuitGame = new System.Windows.Forms.Button();
-            this.grpQuestion.SuspendLayout();
+            this.cmdNextTest = new System.Windows.Forms.Button();
+            this.countDown = new System.Windows.Forms.Timer(this.components);
+            this.lblQuestion = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCategory
@@ -47,33 +49,23 @@
             this.lblCategory.TabIndex = 0;
             this.lblCategory.Text = "Categorie";
             // 
-            // grpQuestion
+            // rbAnswerThree
             // 
-            this.grpQuestion.Controls.Add(this.rbAnswerThree);
-            this.grpQuestion.Controls.Add(this.rbAnswerTwo);
-            this.grpQuestion.Controls.Add(this.rbAnswerOne);
-            this.grpQuestion.Location = new System.Drawing.Point(47, 82);
-            this.grpQuestion.Name = "grpQuestion";
-            this.grpQuestion.Size = new System.Drawing.Size(200, 100);
-            this.grpQuestion.TabIndex = 1;
-            this.grpQuestion.TabStop = false;
-            this.grpQuestion.Text = "Question 1";
-            // 
-            // rbAnswerOne
-            // 
-            this.rbAnswerOne.AutoSize = true;
-            this.rbAnswerOne.Location = new System.Drawing.Point(6, 21);
-            this.rbAnswerOne.Name = "rbAnswerOne";
-            this.rbAnswerOne.Size = new System.Drawing.Size(85, 17);
-            this.rbAnswerOne.TabIndex = 0;
-            this.rbAnswerOne.TabStop = true;
-            this.rbAnswerOne.Text = "radioButton1";
-            this.rbAnswerOne.UseVisualStyleBackColor = true;
+            this.rbAnswerThree.AutoCheck = false;
+            this.rbAnswerThree.AutoSize = true;
+            this.rbAnswerThree.Location = new System.Drawing.Point(47, 177);
+            this.rbAnswerThree.Name = "rbAnswerThree";
+            this.rbAnswerThree.Size = new System.Drawing.Size(85, 17);
+            this.rbAnswerThree.TabIndex = 2;
+            this.rbAnswerThree.TabStop = true;
+            this.rbAnswerThree.Text = "radioButton3";
+            this.rbAnswerThree.UseVisualStyleBackColor = true;
             // 
             // rbAnswerTwo
             // 
+            this.rbAnswerTwo.AutoCheck = false;
             this.rbAnswerTwo.AutoSize = true;
-            this.rbAnswerTwo.Location = new System.Drawing.Point(6, 44);
+            this.rbAnswerTwo.Location = new System.Drawing.Point(47, 154);
             this.rbAnswerTwo.Name = "rbAnswerTwo";
             this.rbAnswerTwo.Size = new System.Drawing.Size(85, 17);
             this.rbAnswerTwo.TabIndex = 1;
@@ -81,16 +73,17 @@
             this.rbAnswerTwo.Text = "radioButton2";
             this.rbAnswerTwo.UseVisualStyleBackColor = true;
             // 
-            // rbAnswerThree
+            // rbAnswerOne
             // 
-            this.rbAnswerThree.AutoSize = true;
-            this.rbAnswerThree.Location = new System.Drawing.Point(6, 67);
-            this.rbAnswerThree.Name = "rbAnswerThree";
-            this.rbAnswerThree.Size = new System.Drawing.Size(85, 17);
-            this.rbAnswerThree.TabIndex = 2;
-            this.rbAnswerThree.TabStop = true;
-            this.rbAnswerThree.Text = "radioButton3";
-            this.rbAnswerThree.UseVisualStyleBackColor = true;
+            this.rbAnswerOne.AutoCheck = false;
+            this.rbAnswerOne.AutoSize = true;
+            this.rbAnswerOne.Location = new System.Drawing.Point(47, 131);
+            this.rbAnswerOne.Name = "rbAnswerOne";
+            this.rbAnswerOne.Size = new System.Drawing.Size(85, 17);
+            this.rbAnswerOne.TabIndex = 0;
+            this.rbAnswerOne.TabStop = true;
+            this.rbAnswerOne.Text = "radioButton1";
+            this.rbAnswerOne.UseVisualStyleBackColor = true;
             // 
             // lblTimer
             // 
@@ -111,20 +104,48 @@
             this.cmdQuitGame.Text = "Quitter";
             this.cmdQuitGame.UseVisualStyleBackColor = true;
             // 
+            // cmdNextTest
+            // 
+            this.cmdNextTest.Location = new System.Drawing.Point(47, 226);
+            this.cmdNextTest.Name = "cmdNextTest";
+            this.cmdNextTest.Size = new System.Drawing.Size(75, 23);
+            this.cmdNextTest.TabIndex = 4;
+            this.cmdNextTest.Text = "next";
+            this.cmdNextTest.UseVisualStyleBackColor = true;
+            this.cmdNextTest.Click += new System.EventHandler(this.cmdNextTest_Click);
+            // 
+            // countDown
+            // 
+            this.countDown.Interval = 1000;
+            this.countDown.Tick += new System.EventHandler(this.countDown_Tick);
+            // 
+            // lblQuestion
+            // 
+            this.lblQuestion.AutoSize = true;
+            this.lblQuestion.Location = new System.Drawing.Point(50, 96);
+            this.lblQuestion.Name = "lblQuestion";
+            this.lblQuestion.Size = new System.Drawing.Size(49, 13);
+            this.lblQuestion.TabIndex = 5;
+            this.lblQuestion.Text = "Question";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 261);
+            this.Controls.Add(this.lblQuestion);
+            this.Controls.Add(this.rbAnswerThree);
+            this.Controls.Add(this.cmdNextTest);
+            this.Controls.Add(this.rbAnswerTwo);
             this.Controls.Add(this.cmdQuitGame);
+            this.Controls.Add(this.rbAnswerOne);
             this.Controls.Add(this.lblTimer);
-            this.Controls.Add(this.grpQuestion);
             this.Controls.Add(this.lblCategory);
             this.Name = "Game";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Game_FormClosed);
             this.Load += new System.EventHandler(this.Game_Load);
-            this.grpQuestion.ResumeLayout(false);
-            this.grpQuestion.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,11 +154,13 @@
         #endregion
 
         private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.GroupBox grpQuestion;
         private System.Windows.Forms.RadioButton rbAnswerThree;
         private System.Windows.Forms.RadioButton rbAnswerTwo;
         private System.Windows.Forms.RadioButton rbAnswerOne;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Button cmdQuitGame;
+        private System.Windows.Forms.Button cmdNextTest;
+        private System.Windows.Forms.Timer countDown;
+        private System.Windows.Forms.Label lblQuestion;
     }
 }

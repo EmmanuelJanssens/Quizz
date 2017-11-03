@@ -12,7 +12,9 @@ namespace Quizz
 
         public int CategoryID { get; set; }
         public int QuestionID { get; set; }
-        public string CurrentPlayer { get; set; }
+        //public string CurrentPlayer { get; set; }
+
+        public Player CurrentPlayer;
 
         public GameManager()
         {
